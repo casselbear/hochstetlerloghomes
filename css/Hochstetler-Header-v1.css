@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+.holiday {
+    font-family: caprizant, sans-serif;
+    font-size: 36px!important;
+    line-height: 36px;
+}
+.aboveMenu{
+    background-color: #112B0D;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.aboveMenu img{
+    height: 100%;
+}
+.menuLeft {
+    width: 25%;
+}
+.menuRight {
+    width: 25%;
+}
+.menuCenter {
+    width: 50%;
+    height: 100px;
+}
+.aboveMenu a {
+    font-size: 38px;
+    color: #fff;
+}
+.menuRight a{
+    font-size: 20px;
+}
+.aboveMenu h1{
+    font-family: pulpo-rust-75, serif;
+    color: #fff;
+    font-size: 46px;
+    margin: 0;
+}
+.clearfix a:hover {
+    color: #fff;
+}
+.items6 {
+    width: 15%!important;
+    margin-right: 1.5%!important;
+}
+.menu {
+    width: 100%;
+    background-color: #82062A;
+    line-height: 24px;
+    font-size: 18px;
+}
+.menu-container {
+    margin: 0 auto;
+    font-family: "mr-eaves-xl-modern";
+    font-weight: 400;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.menu a.logo {
+    display: none;
+    padding: 1em 3em;
+    width: 19%;
+    float: left;
+}
+.menu a {
+    color: #fff;
+}
+.menu img {
+    max-width: 100%;
+}
+.menu-mobile {
+  display: none;
+  padding: 20px;
+}
+.menu-mobile:after {
+  content: "\f394";
+  font-family: "Ionicons";
+  font-size: 2.5rem;
+  padding: 0;
+  float: right;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+}
+.menu-dropdown-icon:before {
+    content: "\f35f";
+    font-family: "Ionicons";
+    display: block;
+    cursor: pointer;
+    float: right;
+    color:  #fff;
+    font-size: 20px;
+    padding: .6em 1em 0em 0em;
+}
+.menu > ul {
+  margin: 0 auto;
+  width: 80%;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  /* IF .menu position=relative -> ul = container width, ELSE ul = 100% width */
+  box-sizing: border-box;
+  clear: right;
+  display: flex;
+  justify-content: center;
+}
+.menu > ul:before,
+.menu > ul:after {
+  content: "";
+  display: table;
+}
+.menu > ul:after {
+  clear: both;
+}
+.menu > ul > li {
+  float: left;
+  background: #82062A;
+  padding: 0;
+  margin: 0;
+}
+.menu > ul > li a {
+  text-decoration: none;
+  padding: .7em 2.4em .7em 2em;
+  display: block;
+  color:  #fff;
+  white-space: nowrap;
+}
+.menu > ul > li a:hover {
+  color: #82062A;
+}
+.menu > ul > li a:active {
+  color: #82062A;
+}
+.menu > ul > li:hover {
+  background: #f0f0f0;
+}
+.menu > ul > li > ul {
+  display: none;
+  width: 100%;
+  background: #f0f0f0;
+  padding: 20px;
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.menu > ul > li > ul:before,
+.menu > ul > li > ul:after {
+  content: "";
+  display: table;
+}
+.menu > ul > li > ul:after {
+  clear: both;
+}
+.menu > ul > li > ul > li {
+  margin: 0;
+  padding-bottom: 0;
+  list-style: none;
+  width: 25%;
+  background: none;
+  float: left;
+}
+.menu > ul > li > ul > li a {
+  color: #82062A;
+  padding: .2em 0;
+  width: 95%;
+  display: block;
+  border-bottom: 1px solid #ccc;
+}
+.menu > ul > li > ul > li p {
+    color: #82062A;
+    padding: .2em 0;
+    width: 95%;
+    display: block;
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+}
+.menu > ul > li > ul > li a:hover{
+	color:#b5b5b5;
+}
+.menu > ul > li > ul > li > ul {
+  display: block;
+  padding: 0;
+  margin: 10px 0 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+.menu > ul > li > ul > li > ul:before,
+.menu > ul > li > ul > li > ul:after {
+  content: "";
+  display: table;
+}
+.menu > ul > li > ul > li > ul:after {
+  clear: both;
+}
+.menu > ul > li > ul > li > ul > li {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  font-size: .8em;
+}
+.menu > ul > li > ul > li > ul > li a {
+  border: 0;    
+  font-size: 14px;
+}
+.menu > ul > li > ul.normal-sub {
+  width: 300px;
+  left: auto;
+  padding: 10px 20px;
+}
+.menu > ul > li > ul.normal-sub > li {
+  width: 100%;
+}
+.menu > ul > li > ul.normal-sub > li a {
+  border: 0;
+  padding: 1em 0;
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Hide On Scroll Settings
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.menu-container {
+  transition: transform 0.4s;
+}
+ 
+.scroll-down .menu-container {
+  transform: translate3d(0, -100%, 0);
+}
+ 
+.scroll-up .menu-container {
+  transform: none;
+}
+ 
+.scroll-up:not(.menu-open) .menu-container {
+  background: var(--lightpurple);
+}
+
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Mobile style's
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media only screen and (max-width: 1076px) {
+  .menu-container {
+    width: 100%;
+  }
+  .menuCenter {
+    width: 100%;
+    text-align: center;
+  }
+  .menu a.logo {
+    display: inline-block;
+  }
+  .hideMobile {
+      display: none!important;
+  }
+  .menu-container .menu{
+	display:table;
+   }
+  .menu-mobile {
+    display: block;    
+    float: right;    
+    padding: 24px 20px 0 20px;
+  }
+  .menu-dropdown-icon:before {
+    display: none;
+  }
+  #noDrop ul {
+      display:none!important;
+  }
+  .menu > ul {
+    display: none;
+    width:100%;
+  }
+  .menu > ul > li {
+    width: 100%;
+    display: block;
+  }
+  .menu > ul > li a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding: 20px 0px;
+  }
+  .menu > ul > li > ul > li a {
+      width: 100%;
+  }
+  .menu > ul > li > ul {
+    position: relative;    
+    padding: 0 40px;
+  }
+  .menu > ul > li > ul.normal-sub {
+    width: 100%;
+    line-height: 36px;
+  }
+  .menu > ul > li > ul > li {
+    float: none;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .menu > ul > li > ul > li:first-child {
+    margin: 0;
+  }
+  .menu > ul > li > ul > li > ul {
+    position: relative;
+  }
+  .menu > ul > li > ul > li > ul > li {
+    float: none;
+  }
+  .menu .show-on-mobile {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  .menu > ul > li > ul.normal-sub > li a {
+    border: 0;
+    padding: 0;
+}
+}
+
+@media only screen and (max-width: 767px) {
+    .menu-container {
+    transform: none!important;
+}
+}
+
+
+
+
+
+

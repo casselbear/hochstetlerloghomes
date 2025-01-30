@@ -1,0 +1,214 @@
+.w-layout-vflex {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
+.popup-close-wrapper {
+  background-color: #0000008f;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-width: 100vw;
+  height: 100%;
+  min-height: 100vh;
+  padding: 56px;
+  position: fixed;
+  overflow: hidden;
+}
+
+.popup-close-wrapper.is--closed {
+  display: none;
+}
+
+.popup-close-wrapper.flex {
+  display: flex;
+}
+
+.popup-close-wrapper.popup-overlay {
+  display: none;
+}
+
+.popup-close-wrapper.popup-overlay.is--closed {
+  display: none !important;
+}
+
+.popup-modal-wrapper {
+  box-sizing: border-box;
+  background-color: #172511;
+  flex-flow: row;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 660px;
+  display: flex;
+  position: relative;
+}
+
+.popup-info-wrap {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 280px;
+  padding: 32px 0;
+  display: flex;
+  position: relative;
+}
+
+.hlh-popup-logo {
+  min-width: 200px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.hlh-popup-log-cabin-days {
+  width: 130%;
+  max-width: none;
+}
+
+.popup-text-description {
+  color: #fff;
+  text-align: center;
+  padding-left: 32px;
+  padding-right: 32px;
+  font-family: Open Sans, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.popup-button {
+  color: #172511;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+  font-family: Open Sans, sans-serif;
+  font-weight: 800;
+  padding: 6px 20px;
+  transition: background-color .2s;
+}
+
+.popup-button:hover, .popup-close-wrap:hover {
+  background-color: #ede3c1;
+  transition: background-color .2s;
+}
+
+.flex-block {
+  grid-column-gap: 32px;
+  grid-row-gap: 32px;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.image {
+  box-sizing: border-box;
+  object-fit: cover;
+  flex: 0 5 auto;
+  max-width: none;
+  display: block;
+  position: relative;
+}
+
+.popup-image {
+  background-image: url('../popup-images/log-cabin-popup-image.jpg');
+  background-position: 50%;
+  background-size: auto;
+  flex: 1;
+}
+
+.popup-button-wrapper {
+  width: 100%;
+  padding-left: 32px;
+  padding-right: 32px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-close-wrapper.popup-overlay {
+  z-index: 1000;
+}
+
+.popup-close-wrap {
+  z-index: 1000;
+  background-color: #fff;
+  background-image: url('../popup-images/popup-close-x.svg');
+  background-position: 50%;
+  background-size: cover;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  inset: -16px -16px auto auto;
+  cursor: pointer;
+  transition: background-color .2s;
+}
+
+.image-2 {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.popup-close-top {
+  width: 100vw;
+  height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+}
+
+.popup-conainer {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .popup-close-wrapper {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .popup-modal-wrapper {
+    flex-flow: column;
+    max-width: 360px;
+  }
+
+  .popup-info-wrap {
+    max-width: none;
+  }
+
+  .hlh-popup-log-cabin-days {
+    width: 120%;
+  }
+
+  .popup-image {
+    order: -1;
+    min-height: 240px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .popup-close-wrapper {
+    padding: 24px;
+  }
+
+  .hlh-popup-logo {
+    max-width: 84%;
+  }
+
+  .popup-image {
+    min-height: 101px;
+  }
+}

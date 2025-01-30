@@ -1,0 +1,391 @@
+
+/* ------------- General ------------- */
+@font-face {
+	font-family: "bootstrapcontrols";
+	src: url("bootstrapcontrols.eot");
+	src: url("bootstrapcontrols.eot") format("embedded-opentype"),
+			url("bootstrapcontrols.woff") format("woff"),
+			url("bootstrapcontrols.ttf") format("truetype"),
+			url("bootstrapcontrols.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+.csslider1 {
+  display: block;
+  position: relative;
+  max-width: 1400px;
+  
+  width: 100%;
+}
+.csslider1 > .cs_anchor {
+  display: none;
+}
+.csslider1 > ul {
+  position: relative;
+  z-index: 1;
+  font-size: 0;
+  line-height: 0;
+  margin: 0 auto;
+  padding: 0;
+  
+  overflow: hidden;
+  white-space: nowrap;
+}
+.csslider1 > ul > div {
+  width: 100%;
+  visibility: hidden;
+  font-size: 0px;
+  line-height: 0;
+}
+.csslider1 > ul > li.img img {
+  width: 100%;
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+}
+.csslider1 > ul > li.img {
+  font-size: 0pt;
+}
+.csslider1 > ul > li {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-size: 15px;
+  font-size: initial;
+  line-height: normal;
+  white-space: normal;
+  vertical-align: top;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+}
+.csslider1 .cs_lnk{
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-size: 0pt;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.csslider1 > ul > li.img,
+.csslider1 > .cs_arrowprev,
+.csslider1 > .cs_arrownext,
+.csslider1 > .cs_bullets,
+.csslider1 > .cs_play_pause {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* ------------- /General Styles ------------- */
+
+/* ------------- General Bullets ------------- */
+.csslider1 > .cs_bullets {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 6;
+  font-size: 0;
+  line-height: 8pt;
+  text-align: center;
+}
+.csslider1 > .cs_bullets > div {
+  margin-left: -50%;
+  width: 100%;
+}
+.csslider1 > .cs_bullets > label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb {
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  line-height: 0;
+  left: -48px;
+  top: -48px;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb > img {
+  max-width: none;
+}
+/* ------------- /General Bullets ------------- */
+
+/* ------------- General Gestures ------------- */
+
+.csslider1 .cs_gestures {
+  visibility: hidden;
+  position: absolute;
+  font-size: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+
+  -webkit-transition: visibility .3s linear, opacity .3s linear;
+  transition: visibility .3s linear, opacity .3s linear;
+}
+.csslider1 .cs_gestures.cs_show {
+  visibility: visible;
+  opacity: 1;
+}
+.csslider1 .cs_gestures.cs_show img {
+  width: 16.666666666666668%;
+}
+.csslider1 .cs_gestures.cs_show .cs_first_img {
+  position: absolute;
+  left: -16.666666666666668%;
+  top: 0;
+}
+.csslider1 .cs_gestures.cs_show .cs_last_img {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+
+.csslider1 .cs_gestures > div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 600%;
+}
+/* ------------- /General Gestures ------------- */
+
+/* ------------- Effect ------------- */
+
+.csslider1 > #cs_slide1_0:checked ~ ul > li.num0,
+.csslider1 > #cs_pause1_0:checked ~ ul > li.num0,
+.csslider1 > #cs_slide1_1:checked ~ ul > li.num1,
+.csslider1 > #cs_pause1_1:checked ~ ul > li.num1,
+.csslider1 > #cs_slide1_2:checked ~ ul > li.num2,
+.csslider1 > #cs_pause1_2:checked ~ ul > li.num2,
+.csslider1 > #cs_slide1_3:checked ~ ul > li.num3,
+.csslider1 > #cs_pause1_3:checked ~ ul > li.num3,
+.csslider1 > #cs_slide1_4:checked ~ ul > li.num4,
+.csslider1 > #cs_pause1_4:checked ~ ul > li.num4,
+.csslider1 > #cs_slide1_5:checked ~ ul > li.num5,
+.csslider1 > #cs_pause1_5:checked ~ ul > li.num5 {
+  opacity: 1;
+  z-index: 2;
+}
+
+.csslider1 > ul > li {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  z-index: 1;
+  
+  -webkit-transition: opacity 2000ms ease;
+  transition: opacity 2000ms ease;
+
+  
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+
+@-webkit-keyframes fade {
+  0%, 20.833333333333336%, 100%  { opacity: 0; z-index: 2; }
+  4.166666666666667%, 16.666666666666668%  { opacity: 1; z-index: 2; }
+}
+@keyframes fade {
+  0%, 20.833333333333336%, 100%  { opacity: 0; z-index: 2; }
+  4.166666666666667%, 16.666666666666668%  { opacity: 1; z-index: 2; }
+}
+
+.csslider1 > #cs_play1:checked ~ ul > li.num0 {
+  -webkit-animation: fade 48000ms infinite -2000ms;
+  animation: fade 48000ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ ul > li.num1 {
+  -webkit-animation: fade 48000ms infinite 6000ms;
+  animation: fade 48000ms infinite 6000ms;
+}
+.csslider1 > #cs_play1:checked ~ ul > li.num2 {
+  -webkit-animation: fade 48000ms infinite 14000ms;
+  animation: fade 48000ms infinite 14000ms;
+}
+.csslider1 > #cs_play1:checked ~ ul > li.num3 {
+  -webkit-animation: fade 48000ms infinite 22000ms;
+  animation: fade 48000ms infinite 22000ms;
+}
+.csslider1 > #cs_play1:checked ~ ul > li.num4 {
+  -webkit-animation: fade 48000ms infinite 30000ms;
+  animation: fade 48000ms infinite 30000ms;
+}
+.csslider1 > #cs_play1:checked ~ ul > li.num5 {
+  -webkit-animation: fade 48000ms infinite 38000ms;
+  animation: fade 48000ms infinite 38000ms;
+}
+
+
+
+.csslider1 > #cs_play1:checked ~ ul > li,
+.csslider1 > .pause:checked ~ ul > li {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+/* ------------- /Effect ------------- */
+
+/* ------------- Template Bullets ------------- */
+.csslider1 > .cs_bullets {
+  bottom: 20px;
+  width: 70%;
+  left: 15%;
+}
+.csslider1 > .cs_bullets > label {
+  margin: 0 2px;
+  padding: 5px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+
+.csslider1 > .cs_bullets > label > .cs_thumb {
+  border: 3px solid #fff;
+  margin-top: -13px;
+  -webkit-transition: opacity .3s, visibility .3s;
+  transition: opacity .3s, visibility .3s;
+}
+.csslider1 > .cs_bullets > label > .cs_thumb:before {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  left: 50%;
+  margin-left: -5px;
+  bottom: -10px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  
+  border-top: 7px solid #fff;
+}
+.csslider1 > .cs_bullets > label:hover > .cs_thumb {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+.csslider1 > #cs_slide1_0:checked ~ .cs_bullets > label.num0,
+.csslider1 > #cs_pause1_0:checked ~ .cs_bullets > label.num0,
+.csslider1 > #cs_slide1_1:checked ~ .cs_bullets > label.num1,
+.csslider1 > #cs_pause1_1:checked ~ .cs_bullets > label.num1,
+.csslider1 > #cs_slide1_2:checked ~ .cs_bullets > label.num2,
+.csslider1 > #cs_pause1_2:checked ~ .cs_bullets > label.num2,
+.csslider1 > #cs_slide1_3:checked ~ .cs_bullets > label.num3,
+.csslider1 > #cs_pause1_3:checked ~ .cs_bullets > label.num3,
+.csslider1 > #cs_slide1_4:checked ~ .cs_bullets > label.num4,
+.csslider1 > #cs_pause1_4:checked ~ .cs_bullets > label.num4,
+.csslider1 > #cs_slide1_5:checked ~ .cs_bullets > label.num5,
+.csslider1 > #cs_pause1_5:checked ~ .cs_bullets > label.num5 {
+  background: #fff;
+  margin-bottom: -1px;
+  padding: 6px;
+  box-shadow: none; 
+}
+
+
+
+@-webkit-keyframes bullet {
+  0%, 16.656666666666666%  {
+    box-shadow: none;
+    background: #fff;
+    padding: 6px;
+    margin-bottom: -1px;
+  }
+  16.666666666666668%, 100% {
+    box-shadow: inset 0 0 0 1px #fff;
+    background: transparent;
+    padding: 5px;
+    margin-bottom: 0;
+  }
+}
+@keyframes bullet {
+  0%, 16.656666666666666%  {
+    box-shadow: none;
+    background: #fff;
+    padding: 6px;
+    margin-bottom: -1px;
+  }
+  16.666666666666668%, 100% {
+    box-shadow: inset 0 0 0 1px #fff;
+    background: transparent;
+    padding: 5px;
+    margin-bottom: 0;
+  }
+}
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num0 {
+  -webkit-animation: bullet 48000ms infinite -2000ms;
+  animation: bullet 48000ms infinite -2000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num1 {
+  -webkit-animation: bullet 48000ms infinite 6000ms;
+  animation: bullet 48000ms infinite 6000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num2 {
+  -webkit-animation: bullet 48000ms infinite 14000ms;
+  animation: bullet 48000ms infinite 14000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num3 {
+  -webkit-animation: bullet 48000ms infinite 22000ms;
+  animation: bullet 48000ms infinite 22000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num4 {
+  -webkit-animation: bullet 48000ms infinite 30000ms;
+  animation: bullet 48000ms infinite 30000ms;
+}
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num5 {
+  -webkit-animation: bullet 48000ms infinite 38000ms;
+  animation: bullet 48000ms infinite 38000ms;
+}
+
+
+
+
+.csslider1 > #cs_play1:checked ~ .cs_bullets > label > .cs_point,
+.csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-transition: none;
+  transition: none;
+}
+
+
+.csslider1 > .slide:checked ~ .cs_bullets > label > .cs_point,
+.csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {
+  -webkit-animation: none;
+  animation: none;
+}
+
+/* ------------- /Template Bullets ------------- */
+/* hide description & bullets on mobile devices */
+@media
+only screen and (max-width: 480px),
+only screen and (-webkit-max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (   max--moz-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (     -o-max-device-pixel-ratio: 2/1)    and (max-width: 480px),
+only screen and (        max-device-pixel-ratio: 2)      and (max-width: 480px),
+only screen and (                max-resolution: 192dpi) and (max-width: 480px),
+only screen and (                max-resolution: 2dppx)  and (max-width: 480px) { 
+  .csslider1 > .cs_description,
+  .csslider1 > .cs_bullets {
+    display: none;
+  }
+}
